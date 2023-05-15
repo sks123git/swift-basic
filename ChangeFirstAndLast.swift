@@ -2,8 +2,10 @@
 
 func changeCharacters(str: String) -> String{
     var arr = Array(str)
-    arr[0]="m"
-    arr[str.count-1] = "s"
+    var temp: String
+    temp=String(arr[0])
+    arr[0]=arr[str.count-1]
+    arr[str.count-1] = Character(temp)
     return String(arr)
 }
 print(changeCharacters(str: "shubham"))
